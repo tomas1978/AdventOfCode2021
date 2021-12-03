@@ -1,4 +1,4 @@
-#answer:
+#answer:2972336
 
 def convertBinArrayToInt(binArray):
     decNumber=0
@@ -27,5 +27,11 @@ for position in range(len(diagnostic[0])-1):
     zeros=0
     ones=0
 
+for i in range(len(gamma)):
+    if(gamma[i]=='0'):
+        epsilon[i]='1'
+
 gammaDecimal=convertBinArrayToInt(gamma)
-print(gammaDecimal)
+epsilonDecimal=convertBinArrayToInt(epsilon)
+
+print("Power consumption: ",gammaDecimal*epsilonDecimal)
