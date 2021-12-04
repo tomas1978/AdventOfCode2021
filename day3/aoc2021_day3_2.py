@@ -13,6 +13,7 @@ zeros=0
 ones=0
 oxygenGenerator=['0','0','0','0','0','0','0','0','0','0','0','0']
 co2Scrubber=['0','0','0','0','0','0','0','0','0','0','0','0']
+mostCommonInPosition=[]
 keepNumbers=[]
 
 for position in range(len(diagnostic[0])-1):
@@ -25,5 +26,8 @@ for position in range(len(diagnostic[0])-1):
         mostCommon=1
     else:
         mostCommon=0
+    mostCommonInPosition.append(mostCommon)
+
     zeros=0
     ones=0
+print(mostCommonInPosition)
