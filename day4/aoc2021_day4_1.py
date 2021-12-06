@@ -1,6 +1,11 @@
 #answer:
 
-def checkBingo():
+def checkBingo(board):
+    bingoCounter=0
+    for row in range(len(board)):
+        for pos in range(len(board[row])):
+            if board[row][pos]=='X':
+                bingoCounter+=1
     isBingo=False
 
 f = open('input.txt','r')
