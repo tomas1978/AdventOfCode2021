@@ -1,5 +1,8 @@
 #answer:
 
+def checkBingo():
+    isBingo=False
+
 f = open('input.txt','r')
 #bingoData = f.readlines()
 continueRead=True
