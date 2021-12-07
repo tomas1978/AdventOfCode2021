@@ -6,7 +6,12 @@ def checkBingo(board):
         for pos in range(len(board[row])):
             if board[row][pos]=='X':
                 bingoCounter+=1
-    isBingo=False
+    if bingoCounter==3:
+        return True
+    else:
+        return False
+
+
 
 f = open('input.txt','r')
 #bingoData = f.readlines()
@@ -32,3 +37,10 @@ while continueRead:
 
 
 print(boards[0])
+testBoard=[ [1, 2, 3],
+            [6, 4, 9],
+            [3, 7, 1],
+            [4, 7, 5] ]
+
+isBingo=checkBingo(testBoard)
+print(isBingo)
