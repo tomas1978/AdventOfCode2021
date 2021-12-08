@@ -1,11 +1,11 @@
 #answer:
 
-def checkBingo(board):
+def checkHorizontalBingo(board):
     bingoCounter=0
     isBingo=False;
     for row in range(len(board)):
         print(board[row])
-        #bingoCounter=0
+        bingoCounter=0
         for pos in range(len(board[row])):
             if board[row][pos]=='X':
                 bingoCounter+=1
@@ -13,6 +13,8 @@ def checkBingo(board):
                 isBingo=True
     return isBingo
 
+def checkVerticalBingo(board):
+    return false;
 
 f = open('input.txt','r')
 #bingoData = f.readlines()
@@ -38,10 +40,10 @@ while continueRead:
 
 
 print(boards[0])
-testBoard=[ ['2', 'X', 'X'],
-            ['1', '4', '3'],
-            ['2', '3', '2'],
-            ['3', '3', '5'] ]
+testBoard=[ ['X', '6', 'X'],
+            ['X', 'X', '3'],
+            ['X', 'X', '9'],
+            ['X', 'X', 'X'] ]
 
 isBingo=checkBingo(testBoard)
 print(isBingo)
