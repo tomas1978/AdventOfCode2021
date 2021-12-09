@@ -14,7 +14,9 @@ def checkHorizontalBingo(board):
     return isBingo
 
 def checkVerticalBingo(board):
-    return false;
+    for col in range(len(board)):
+        for pos in range(len(board[col])):
+            print("Test")
 
 f = open('input.txt','r')
 #bingoData = f.readlines()
@@ -45,5 +47,5 @@ testBoard=[ ['X', '6', 'X'],
             ['X', 'X', '9'],
             ['X', 'X', 'X'] ]
 
-isBingo=checkBingo(testBoard)
+isBingo=checkHorizontalBingo(testBoard)
 print(isBingo)
