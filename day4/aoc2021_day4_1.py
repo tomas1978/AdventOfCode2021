@@ -1,4 +1,4 @@
-#answer:
+5#answer:
 
 def checkHorizontalBingo(board):
     bingoCounter=0
@@ -9,18 +9,18 @@ def checkHorizontalBingo(board):
         for pos in range(len(board[row])):
             if board[row][pos]=='X':
                 bingoCounter+=1
-            if bingoCounter==3:
+            if bingoCounter==5:
                 isBingo=True
     return isBingo
 
 def checkVerticalBingo(board):
     isBingo=False
-    for col in range(len(board)-1):
+    for col in range(len(board)):
         bingoCounter=0
-        for pos in range(len(board[col])-1):
+        for pos in range(len(board[col])):
             if board[pos][col]=='X':
                 bingoCounter+=1
-            if bingoCounter==3:
+            if bingoCounter==5:
                 isBingo=True;
     return isBingo
 
@@ -48,10 +48,11 @@ while continueRead:
 
 
 print(boards[0])
-testBoard=[ ['X', 'X', '9'],
-            ['X', 'X', '9'],
-            ['X', 'X', '9'],
-            ['X', 'X', '9'] ]
+testBoard=[ ['1', 'X', 'X', 'X', 'X'],
+            ['X', 'X', '8', 'X', 'X'],
+            ['X', '5', 'X', 'X', 'X'],
+            ['X', 'X', 'X', 'X', 'X'],
+            ['X', 'X', 'X', '6', '3'] ]
 
-isBingo=checkVerticalBingo(testBoard)
+isBingo=checkHorizontalBingo(testBoard)
 print(isBingo)
