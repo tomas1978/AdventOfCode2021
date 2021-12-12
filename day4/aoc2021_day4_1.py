@@ -1,4 +1,4 @@
-5#answer:
+#answer:
 
 def checkHorizontalBingo(board):
     bingoCounter=0
@@ -46,13 +46,17 @@ while continueRead:
     if not line:
         continueRead=False
 
+board=[]
+for i in range(6):
+    board.append(boards[1][0].split())
+print(board)
 
-print(boards[0])
+
 testBoard=[ ['1', 'X', 'X', 'X', 'X'],
             ['X', 'X', '8', 'X', 'X'],
             ['X', '5', 'X', 'X', 'X'],
             ['X', 'X', 'X', 'X', 'X'],
             ['X', 'X', 'X', '6', '3'] ]
-
-isBingo=checkHorizontalBingo(testBoard)
-print(isBingo)
+#print(testBoard)
+#isBingo=checkHorizontalBingo(testBoard)
+#print(isBingo)
