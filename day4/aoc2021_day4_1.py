@@ -47,16 +47,21 @@ while continueRead:
         continueRead=False
 
 board=[]
-for i in range(6):
-    board.append(boards[1][0].split())
-print(board)
+boardList=[]
+for i in range (1, 3):
+    for j in range(len(boards[1])):
+        board.append(boards[i][j].split())
+    boardList.append(board)
 
+#print(boards)
+lastBoard=[ ['23', '61', '97', '1', '69' ],
+            ['53', '98', '28', '52', '19'],
+            ['66', '51', '46', '77', '15'],
+            ['34', '36', '47', '80', '14'],
+            ['7', '89', '62',  '9',  '49'] ]
 
-testBoard=[ ['1', 'X', 'X', 'X', 'X'],
-            ['X', 'X', '8', 'X', 'X'],
-            ['X', '5', 'X', 'X', 'X'],
-            ['X', 'X', 'X', 'X', 'X'],
-            ['X', 'X', 'X', '6', '3'] ]
+boardList.append(lastBoard)
+print(boardList[0])
 #print(testBoard)
 #isBingo=checkHorizontalBingo(testBoard)
 #print(isBingo)
