@@ -25,6 +25,9 @@ def checkVerticalBingo(board):
     return isBingo
     
 def countNumberOfBingoBoards(boards):
+    for i in range(len(boards)):
+        if checkVerticalBingo(boards[i]) or checkHorizontalBingo(boards[i]):
+            numberOfBingo+=1
     numberOfBingo=0
     return numberOfBingo 
 
