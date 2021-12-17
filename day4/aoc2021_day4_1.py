@@ -23,13 +23,17 @@ def checkVerticalBingo(board):
             if bingoCounter==5:
                 isBingo=True;
     return isBingo
-    
+
 def countNumberOfBingoBoards(boards):
     for i in range(len(boards)):
         if checkVerticalBingo(boards[i]) or checkHorizontalBingo(boards[i]):
             numberOfBingo+=1
     numberOfBingo=0
-    return numberOfBingo 
+    return numberOfBingo
+
+def drawNumber(number, boards):
+    return False
+
 
 f = open('input.txt','r')
 #bingoData = f.readlines()
